@@ -31,12 +31,12 @@
 
 ---
 
-| Algorithm/Size           | 10         | 100        | 1000       |
-|--------------------------|------------|------------|------------|
-| Basic sorting (Bubble)   | 2775000 ns | 1568500 ns | 5829100 ns |
-| Advanced sorting (Merge) | 127200 ns  | 6364900 ns | 1074400 ns |
-| Linear search            | 2900 ns    | 2400 ns    | 1000 ns    |
-| Binary search            | 1600 ns    | 1200 ns    | 1000 ns    |
+| Algorithm/Size                | 10 (random) | 100 (random) | 1000 (random) | 10 (sorted) | 100 (sorted) | 1000 (sorted) |
+|-------------------------------|-------------|--------------|---------------|-------------|--------------|---------------|
+| Basic sorting (Bubble)        | 21619000 ns | 1143800 ns   | 1166800 ns    | 139400 ns   | 1346800 ns   | 1425500 ns    |
+| Advanced sorting (Merge)      | 142500 ns   | 866700 ns    | 994600 ns     | 187800 ns   | 1401900 ns   | 1100800 ns    |
+| Linear search                 | 4200 ns     | 1100 ns      | 1900 ns       | 1000 ns     | 2100 ns      | 3000 ns       |
+| Binary search (always sorted) |             |              |               | 1300 ns     | 1400 ns      | 1500 ns       |
 
 ---
 

@@ -54,5 +54,24 @@ public class Main {
 
             System.out.println("---");
         }
+
+        for (int size: new int[]{10, 100, 100}) {
+            int[] arr = generateRandomSortedArray(size);
+
+            for (String type: new String[]{"Basic", "Advanced"}) {
+                time = experiment.measureSortTime(arr, type);
+                System.out.println(type + " sort completed in " + time + " nanoseconds");
+            }
+
+            System.out.println();
+
+            for (String type: new String[]{"Linear", "Binary"}) {
+                int randomElement = arr[random.nextInt(0, size)];
+                time = experiment.measureSearchTime(arr, randomElement, type);
+                System.out.println(type + " search completed in " + time + " nanoseconds");
+            }
+
+            System.out.println("---");
+        }
     }
 }
