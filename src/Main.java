@@ -13,6 +13,17 @@ public class Main {
         return arr;
     }
 
+    public static int[] generateRandomSortedArray(int size) {
+        int[] arr = new int[size];
+        arr[0] = random.nextInt(-10 * size, -9 * size);
+
+        for (int i = 1; i < size; i++) {
+            arr[i] = random.nextInt(arr[i - 1], arr[i - 1] + size);
+        }
+
+        return arr;
+    }
+
     public static void main(String[] args) {
         Experiment experiment = new Experiment();
         long time;
@@ -26,12 +37,19 @@ public class Main {
                 System.out.println(type + " sort completed in " + time + " nanoseconds");
             }
 
-            int randomElement = arr[random.nextInt(size)];
             System.out.println();
 
             for (String type: new String[]{"Linear", "Binary"}) {
-                time = experiment.measureSearchTime(arr, randomElement, type);
-                System.out.println(type + " search completed in " + time + " nanoseconds");
+                if (type.equals("Linear")) {
+                    int randomElement = arr[random.nextInt(0, size)];
+                    time = experiment.measureSearchTime(arr, randomElement, type);
+                    System.out.println(type + " search completed in " + time + " nanoseconds");
+                } else {
+                    arr = generateRandomSortedArray(size);
+                    int randomElement = arr[random.nextInt(0, size)];
+                    time = experiment.measureSearchTime(arr, randomElement, type);
+                    System.out.println(type + " search completed in " + time + " nanoseconds");
+                }
             }
 
             System.out.println("---");

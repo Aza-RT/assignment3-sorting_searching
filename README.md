@@ -31,9 +31,12 @@
 
 ---
 
-![](screenshots/screenshot8.png)
-
-The results.
+| Algorithm/Size           | 10         | 100        | 1000       |
+|--------------------------|------------|------------|------------|
+| Basic sorting (Bubble)   | 2775000 ns | 1568500 ns | 5829100 ns |
+| Advanced sorting (Merge) | 127200 ns  | 6364900 ns | 1074400 ns |
+| Linear search            | 2900 ns    | 2400 ns    | 1000 ns    |
+| Binary search            | 1600 ns    | 1200 ns    | 1000 ns    |
 
 ---
 

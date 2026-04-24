@@ -12,7 +12,7 @@ public class Searcher {
     public static int binarySearch(int[] array, int target) {
         int left = 0, right = array.length - 1, middle = 0;
 
-        while (middle < right) {
+        while (middle <= right) {
             middle = (int)((left + right) / 2);
 
             if (array[middle] == target) {
