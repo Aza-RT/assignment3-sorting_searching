@@ -29,7 +29,7 @@ public class Main {
         long time;
 
         System.out.println("---");
-        for (int size: new int[]{10, 100, 100}) {
+        for (int size: new int[]{10, 100, 1000}) {
             int[] arr = generateRandomArray(size);
 
             for (String type: new String[]{"Basic", "Advanced"}) {
@@ -55,7 +55,7 @@ public class Main {
             System.out.println("---");
         }
 
-        for (int size: new int[]{10, 100, 100}) {
+        for (int size: new int[]{10, 100, 1000}) {
             int[] arr = generateRandomSortedArray(size);
 
             for (String type: new String[]{"Basic", "Advanced"}) {
